@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Garden Tracker</title>
+  <link rel="stylesheet" href="/css/myGarden.css" />
+</head>
+<body>
+  <header class="top-header">
+    <img src="/assets/home gardening assistant app-logo.jpg" alt="Logo" id="site-logo" />
+    <h1>GardenLy</h1>
+    <button style="background-color: #3d9140; color: white; margin: 20px;">Dashboard</button>
+
+    <div class="user-section"><span id="userName">Hello, Guest</span></div>
+  </header>
+
+  <main>
+    <section class="tracker-controls">
+      <button id="add-plant-btn">➕ Add Plant Entry</button>
+    </section>
+
+    <div class="modal" id="addPlantModal">
+      <div class="modal-content">
+        <span id="closeModal" class="close-btn">❌</span>
+        <h2>Add Garden Entry</h2>
+        <form id="gardenTrackerForm">
+          <label for="plantSelector">Select Plant:</label>
+          <select id="plantSelector" required></select>
+
+          <label for="plantedDate">Planted Date:</label>
+          <input type="date" id="plantedDate" required />
+
+          <label for="growthNotes">Growth Notes:</label>
+          <textarea id="growthNotes" placeholder="Optional..."></textarea>
+
+          <label for="wateringSchedule">Watering Schedule:</label>
+          <input type="text" id="wateringSchedule" placeholder="e.g. Every 2 days" />
+
+          <label for="fertilizerSchedule">Fertilizing Schedule:</label>
+          <input type="text" id="fertilizerSchedule" placeholder="e.g. Once a week" />
+
+          <button type="submit">Save Entry</button>
+        </form>
+      </div>
+    </div>
+
+   
+    <section id="gardenEntries" class="entries-section">
+
+    </section>
+  </main>
+
+  
+  <footer>
+    <p>&copy; 2025 GardenLy. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+
+  <script type="module" src="/js/myGarden.js"></script>
+</body>
+</html>

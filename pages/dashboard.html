@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Home Gardening Assistant</title>
+  <link rel="stylesheet" href="/css/dashboard.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="/assets/home gardening assistant app-logo.jpg" alt="Logo" />
+        <h2>GardenLy</h2>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/pages/myGarden.html">🌱 My Garden</a></li>
+        <li><a href="/pages/seasonalTips.html">📚 Seasonal Tips</a></li>
+        <li><a href="/pages/reminder.html">🔔 Reminders</a></li>
+        <li><a href="/pages/communityForum.html">🪴 Community</a></li>
+        <li><a href="#">👤 Profile</a></li>
+        <li><button id="logoutBtn">🚪 Logout</button></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <nav class="topbar">
+        <input type="text" placeholder="Search plants..." />
+        <div class="user-section">
+          <img src="/assets/user.png" alt="User" />
+        </div>
+      </nav>
+
+      <section class="dashboard-welcome">
+        <h1>Welcome to your Garden Dashboard 🌿</h1>
+        <p>Track your plants, stay updated on reminders, and connect with the gardening community!</p>
+      </section>
+
+      <section class="quick-actions">
+        <div class="card">
+          <h3>🌻 Add New Plant</h3>
+          <p>Log a new plant into your personal garden tracker.</p>
+        </div>
+        <div class="card">
+          <h3>🕒 View Reminders</h3>
+          <p>Check which plants need watering or care today.</p>
+        </div>
+        <div class="card">
+          <h3>👥 Join Discussion</h3>
+          <p>Ask questions, share tips, and help others in the forum.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 GardenLy. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/dashboard.js"></script>
+  <script type="module" src="/js/logout.js"></script>
+</body>
+</html>

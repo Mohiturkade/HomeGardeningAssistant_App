@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Set Reminder</title>
+  <link rel="stylesheet" href="/css/reminder.css" />
+</head>
+<body>
+
+  <header class="top-header">
+    <img src="/assets/home gardening assistant app-logo.jpg" alt="Logo" id="site-logo" />
+    <h1>GardenLy</h1>
+  </header>
+
+  <main class="reminder-container">
+    <h2>🌱 Set Reminder</h2>
+    <form id="reminderForm">
+      <input type="text" id="title" placeholder="Reminder Title" required />
+      <input type="date" id="date" required />
+      <input type="time" id="time" required />
+      <button type="submit">Add Reminder</button>
+    </form>
+
+    <p id="reminderMessage"></p>
+    <div id="reminderList"></div>
+  </main>
+
+    <footer>
+    <p>&copy; 2025 GardenLy. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+  <script src="/js/reminder.js"></script>
+</body>
+</html>
+
+
+
+

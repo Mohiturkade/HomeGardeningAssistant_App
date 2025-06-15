@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community forum</title>
+    <link rel="stylesheet" href="/css/communityForum.css">
+</head>
+<body>
+
+    
+  <nav class="navbar">
+    <div class="logo">
+      <img src="/assets/home gardening assistant app-logo.jpg" alt="Logo" />
+      <h1 class="text-2xl font-bold text-green-700">GardenLy</h1>
+      
+    </div>
+    <div class="links">
+      <a style="text-align: right;" href="/pages/dashboard.html" class="cta">Dashboard</a>
+    </div> 
+  </nav>
+<div id="forum-container">
+    <h1>Welcome to the Gardening Community Forum!</h1>
+    <p>This is a friendly space for gardening enthusiasts to ask questions, share tips, and exchange ideas about everything from home gardening to sustainable practices.</p>
+
+    <p>By participating, you’re joining a supportive community of plant lovers who are here to learn, grow, and help each other thrive — just like our gardens!</p>
+
+     <p>To join the conversation, simply log in with your Gardening Assistant account. Please be sure to review our Community Guidelines, Terms of Use, and Privacy Policy to ensure a safe and respectful environment for all.</p>
+    </div>
+    <button id="newTopicBtn">New Topic</button>
+
+
+<form id="postForm" onsubmit="handlePostSubmit(event)">
+  <label for="subject">Subject:</label>
+  <input id="subject" type="text" placeholder="e.g. Tomato Plant Not Growing" required />
+
+  <label for="message">Message:</label>
+  <textarea id="message" placeholder="Describe your issue, question, or tip..." rows="5" required></textarea>
+
+  <button type="submit">Post</button>
+</form>
+<h2>Community Posts:</h2>
+<div id="community-posts">
+
+        <p>by <strong>Mohit urkade</strong></p>
+        <h2>Error message for obtaining access_token</h2>
+        <p>Error message for obtaining access_token api : https://api-m.paypal.com/v1/oauth2/token{    "error": "invalid_client",    "error_description": "Client Authentication failed"} What is usually the reason for this situation</p>
+        <span>Dec-13-2024 12:44:38 AM</span>
+
+    </div>
+
+    
+  <footer>
+    <p>&copy; 2025 GardenLy. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+    <script type="module" src="/js/communityForum.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seasonal Gardening Tips</title>
+  <link rel="stylesheet" href="/css/seasonalTips.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="/assets/home gardening assistant app-logo.jpg" alt="Logo" />
+      <h1 class="text-2xl font-bold text-green-700">GardenLy</h1>
+    </div>
+    <div class="links">
+      <a href="/pages/dashboard.html">Dashboard</a>
+     
+     
+    </div>
+  </nav>
+
+
+  <header>
+
+    <h1>🌱 Seasonal Gardening Tips</h1>
+    <p>Get personalized gardening advice based on your region and season.</p>
+  
+  </header>
+
+  <main>
+    <section id="tipForm">
+      <label for="region">🌍 Select Region:</label>
+      <select id="region">
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+        <!-- Add more regions -->
+      </select>
+
+      <label for="season">☀️ Select Season:</label>
+      <select id="season">
+        <option value="Summer">Summer</option>
+        <option value="Winter">Winter</option>
+        <option value="Monsoon">Monsoon</option>
+        <option value="Spring">Spring</option>
+        <option value="Autumn">Autumn</option>
+      </select>
+
+      <button id="getTipBtn">Get Tips</button>
+
+    </section>
+
+    <section id="seasonalTips">
+     
+    </section>
+  </main>
+
+  <script type="module" src="/js/seasonalTips.js"></script>
+</body>
+
+</html>

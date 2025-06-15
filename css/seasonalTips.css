@@ -1,0 +1,144 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #f1fdf6;
+  color: #2e3a2c;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #2a8a4a;
+}
+
+header a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #2a8a4a;
+  font-weight: bold;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+#tipForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+#tipForm label {
+  font-weight: bold;
+}
+
+#tipForm select,
+#tipForm button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+#tipForm button {
+  background-color: #2a8a4a;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#tipForm button:hover {
+  background-color: #206d38;
+}
+
+#seasonalTips {
+  background: #e8f5e9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#seasonalTips h3 {
+  margin-bottom: 10px;
+  color: #1b5e20;
+}
+
+#seasonalTips ul {
+  list-style: disc inside;
+}
+
+#seasonalTips li {
+  margin-bottom: 8px;
+
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 1rem 2rem;
+
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.navbar .links a {
+  border-radius: 6px;
+  margin-left: 20px;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+   background-color: #0f9c16;
+   padding: 10px
+   
+   
+   
+
+}
+
+.navbar .cta {
+ 
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.navbar .cta:hover {
+  background-color: #256329;
+}
+
+
+
+
