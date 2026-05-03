@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 * {
   margin: 0;
@@ -7,26 +7,40 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(120deg, #F1F8E9 0%, #E8F5E9 100%);
+  background: linear-gradient(120deg, #f1f8e9 0%, #e8f5e9 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 20px;
+
+  font-family: "Inter", sans-serif;
+  color: #374151;
+}
+
+h1,
+h2 {
+  font-family: "Fraunces", serif;
 }
 
 .logo-box {
-  text-align: center;
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 25px;
+}
+.logo-box img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.logo-box h1{
+  font-size: 1.5rem;
 }
 
-.logo-box img {
-  width: 90px;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-}
 
 .signup-container {
   width: 100%;
@@ -42,15 +56,14 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
 }
-
-h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-  background: linear-gradient(to right, #2E7D32, #66BB6A);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: fadeIn 1s ease-in-out;
+.text-section{
+  margin: 10px 10px 10px 0px;
+}
+.text-section h1{
+  margin-bottom: 10px;
+}
+.text-section p{
+  color: #6b7280;
 }
 
 @keyframes fadeIn {
@@ -78,11 +91,11 @@ button {
 }
 
 input:focus {
-  border-color: #2E7D32;
+  border-color: #2e7d32;
 }
 
 button {
-  background: linear-gradient(135deg, #2E7D32, #66BB6A);
+  background: linear-gradient(135deg, #2e7d32, #66bb6a);
   color: white;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -91,20 +104,20 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(to right, #2E7D32, #81C784);
+  background: linear-gradient(to right, #2e7d32, #81c784);
 }
 
 a {
   display: block;
   text-align: center;
   text-decoration: none;
-  color: #2E7D32;
+  color: #6b7280;
   font-size: 0.95rem;
   margin-top: 20px;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #1B5E20;
+  color: #1b5e20;
   text-decoration: underline;
 }

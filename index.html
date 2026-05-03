@@ -1,69 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home gardening assistant</title>
+  <title>GardenLy - Smart Gardening Assistant</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900&family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
+  <!-- NAVBAR -->
   <nav>
-    <div class="logo-section">
-      <img src="home gardening assistant app-logo.jpg" alt="Logo" />
-      <h1>GardenLy</h1>
-    </div>
-    <div class="nav-links">
-      <a href="#features">Features</a>
-      <a href="login.html">Login</a>
-      <a href="signup.html" class="cta">Get Started</a>
+    <div class="container nav-inner">
+
+      <div class="left-section">
+        <div class="logo-section">
+          <img src="logo-c.jpg" alt="GardenLy Logo" />
+        </div>
+        <h1>GardenLy</h1>
+      </div>
+
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">☰</label>
+
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html" class="cta">Get Started</a>
+      </div>
+
     </div>
   </nav>
 
-  <section class="hero">
-    <h2>Grow smarter with your digital gardening guide 🌿</h2>
-    <p>
-      Track your plants, get personalized care tips, and join a thriving gardening community—all in one app.
-    </p>
-    <a href="signup.html" class="cta">Create Your Garden</a>
-  </section>
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="container">
 
-  <section id="features" class="features">
-    <h3>Key Features</h3>
-    <div class="features-grid">
-      <div class="feature-card">
-        <h4>🌱 Plant Care</h4>
-        <p>Explore detailed care guides for a wide variety of plants including sunlight, water, and soil tips.</p>
+      <div class="hero-section-left">
+        <p>✨ Smart Gardening, made gentle</p>
+
+        <h1>
+          Grow a garden you'll <span>truly love</span>.
+        </h1>
+
+        <p>
+          Gardenly is your warm, AI-powered companion for caring for plants —
+          track each one, get watering nudges, and learn as you grow.
+        </p>
+
+        <div class="hero-section-left-btns">
+          <a href="#" class="btn primary">Start your garden</a>
+          <a href="#" class="btn secondary">I already have an account</a>
+        </div>
       </div>
-      <div class="feature-card">
-        <h4>📅 Garden Tracker</h4>
-        <p>Keep a log of your plants' growth, track watering schedules, and document your progress.</p>
+
+      <div class="hero-section-right">
+        <img src="hero-gardenly.jpg" alt="Garden plants preview" />
       </div>
-      <div class="feature-card">
-        <h4>🔔 Watering Reminders</h4>
-        <p>Never forget to water again—receive timely reminders based on your plant’s needs.</p>
-      </div>
-      <div class="feature-card">
-        <h4>🪴 Community Forum</h4>
-        <p>Connect with fellow gardeners, share tips, ask questions, and grow together.</p>
-      </div>
-      <div class="feature-card">
-        <h4>🐛 Pest Identifier</h4>
-        <p>Diagnose plant issues quickly and get suggestions for natural or chemical treatments.</p>
-      </div>
-      <div class="feature-card">
-        <h4>🏆 Gardening Challenges</h4>
-        <p>Participate in fun seasonal challenges and earn a spot on the leaderboard.</p>
-      </div>
+
     </div>
   </section>
 
+  <!-- FEATURES -->
+  <section id="features" class="features">
+    <div class="container">
+
+      <h1>Everything your plants need</h1>
+
+      <p class="subtitle">
+        From your first sprout to a thriving garden — guidance, tracking,
+        and a community that grows with you.
+      </p>
+
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <span>🌱</span>
+          <h4>Plant Care</h4>
+          <p>Detailed care guides for sunlight, water, and soil.</p>
+        </div>
+
+        <div class="feature-card">
+          <span>📅</span>
+          <h4>Garden Tracker</h4>
+          <p>Track growth, watering schedules, and plant progress.</p>
+        </div>
+
+        <div class="feature-card">
+          <span>🔔</span>
+          <h4>Watering Reminders</h4>
+          <p>Get timely reminders based on plant needs.</p>
+        </div>
+
+        <div class="feature-card">
+          <span>🪴</span>
+          <h4>Community Forum</h4>
+          <p>Connect with gardeners and share tips.</p>
+        </div>
+
+        <div class="feature-card">
+          <span>🐛</span>
+          <h4>Pest Identifier</h4>
+          <p>Diagnose plant issues and get treatment suggestions.</p>
+        </div>
+
+        <div class="feature-card">
+          <span>🏆</span>
+          <h4>Gardening Challenges</h4>
+          <p>Join seasonal challenges and earn rewards.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="card">
+    <div class="container">
+
+      <h1>Ready to grow something beautiful?</h1>
+
+      <p>
+        Join GardenLy today and turn caring for your plants into a daily ritual.
+      </p>
+
+      <a href="#" class="btn primary">Plant your first seed</a>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 GardenLy. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="#">Contact</a>
+    <div class="container">
+
+      <p>&copy; 2025 GardenLy. All rights reserved.</p>
+
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+
     </div>
   </footer>
 

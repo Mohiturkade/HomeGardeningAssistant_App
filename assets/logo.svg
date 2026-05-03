@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%" aria-label="GardenLy Logo" role="img">
+  <!-- Sun -->
+  <circle cx="100" cy="45" r="18" fill="#F4C430"></circle>
+  <g fill="#F4C430">
+    <polygon points="100,12 104,24 96,24"></polygon>
+    <polygon points="100,78 104,66 96,66"></polygon>
+    <polygon points="67,45 79,41 79,49"></polygon>
+    <polygon points="133,45 121,41 121,49"></polygon>
+    <polygon points="78,20 88,30 82,34"></polygon>
+    <polygon points="122,20 118,34 112,30"></polygon>
+  </g>
+
+  <!-- Smile -->
+  <circle cx="94" cy="42" r="2.5" fill="#1B5E20"></circle>
+  <circle cx="106" cy="42" r="2.5" fill="#1B5E20"></circle>
+  <path d="M92 48 Q100 54 108 48" stroke="#1B5E20" stroke-width="3" fill="none"></path>
+
+  <!-- Stem -->
+  <path d="M100 65 C98 95 98 125 100 155" stroke="#1B5E20" stroke-width="10" fill="none"></path>
+
+  <!-- Left Leaf -->
+  <path d="M100 90 C55 75 40 120 80 155
+           C90 165 95 150 100 145 Z" fill="#2E7D32"></path>
+
+  <!-- Right Leaf -->
+  <path d="M100 90 C145 75 160 120 120 155
+           C110 165 105 150 100 145 Z" fill="#43A047"></path>
+</svg>
