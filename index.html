@@ -6,7 +6,7 @@
   <title>GardenLy - Smart Gardening Assistant</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/frontend/css/style.css" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,7 @@
 
       <div class="left-section">
         <div class="logo-section">
-          <img src="logo-c.jpg" alt="GardenLy Logo" />
+          <img src="/frontend/assets/logo-c.jpg" alt="GardenLy Logo" />
         </div>
         <h1>GardenLy</h1>
       </div>
@@ -35,6 +35,9 @@
         <a href="login.html">Login</a>
         <a href="signup.html" class="cta">Get Started</a>
       </div>
+
+     
+       <img id="theme-mode" src="/frontend/assets/dark-mode.png" alt="">
 
     </div>
   </nav>
@@ -62,7 +65,7 @@
       </div>
 
       <div class="hero-section-right">
-        <img src="hero-gardenly.jpg" alt="Garden plants preview" />
+        <img src="/frontend/assets/hero-gardenly.jpg" alt="Garden plants preview" />
       </div>
 
     </div>
@@ -151,6 +154,36 @@
 
     </div>
   </footer>
+
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+  const themeMode = document.getElementById("theme-mode");
+
+  // 1. Apply saved theme
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme === "dark-theme") {
+    document.body.classList.add("dark-theme");
+    themeMode.src = "/frontend/assets/light-mode.png";
+  } else {
+    themeMode.src = "/frontend/assets/dark-mode.png";
+  }
+
+  // 2. Toggle theme
+  themeMode.addEventListener("click", () => {
+    document.body.classList.toggle("dark-theme");
+
+    if (document.body.classList.contains("dark-theme")) {
+      themeMode.src = "/frontend/assets/light-mode.png";
+      localStorage.setItem("theme", "dark-theme");
+    } else {
+      themeMode.src = "/frontend/assets/dark-mode.png";
+      localStorage.setItem("theme", "light-theme");
+    }
+  });
+});
+</script>
+
 
 </body>
 </html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/frontend/css/dashboard.css">
+</head>
+<body>
+  <div class="dashboard">
+    <nav class="navbar">
+       <div class="left-section">
+        <div class="logo-section">
+          <img src="/frontend/assets/logo-c.jpg" alt="GardenLy Logo" />
+        </div>
+        <h1>GardenLy</h1>
+      </div>
+
+      <div class="middle-section">
+        <ul class="nav-links">
+          <li><a href="">Garden</a></li>
+          <li><a href="">Library</a></li>
+          <li><a href="">Journal</a></li>
+          <li><a href="">Community</a></li>
+          <li><a href="">Challenges</a></li>
+          <li><a href="">Tips</a></li>
+          <li><a href="">Diagnose</a></li>
+          <li><a href="">Shopping</a></li>
+          <li><a href="">Planner</a></li>
+        </ul>
+      </div>
+
+      <div class="right-section">
+        <button>Sign out</button>
+
+        <img class="theme-mode" src="/frontend/assets/dark-mode.png" alt="">
+
+      </div>
+    </nav>
+
+
+    <div class="text-button-section">
+      <div class="text-section">
+        <h1>My Garden</h1>
+        <p>Your garden is waiting for its first plant.</p>
+
+      </div>
+<button class="add-plant-btn">+ Add a plant</button>
+    </div>
+
+    <div class="add-section">
+      <img src="/frontend/assets/leaf.png" alt="">
+      
+      <h1>Plant your first one</h1>
+      <p>Add a plant to start tracking watering, growth, and care reminders.</p>
+     <button class="add-plant-btn">+ Add a plant</button>
+    </div>
+
+  </div>
+
+
+<!-- Popup Modal -->
+<div id="popup" class="popup">
+
+  <div class="add-plant-container">
+
+    <div class="popup-card">
+      <button id="close-btn">X</button>
+
+      <h1>Add Plant</h1>
+      <p>Tell us a bit about your new plant</p>
+      
+
+      <form>
+      
+        <div class="form-group">
+          <label for="nickname">Nickname</label>
+          <input
+            id="nickname"
+            placeholder="Monstera"
+            type="text"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="species">Species</label>
+          <input
+            id="species"
+            placeholder="Monstera deliciosa"
+            type="text"
+          >
+        </div>
+
+        <div class="row">
+
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input
+              id="location"
+              placeholder="Living room"
+              type="text"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="water-every">
+              Water every (days)
+            </label>
+
+            <input
+              id="water-every"
+              value="7"
+              type="number"
+            >
+          </div>
+
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Notes</label>
+
+          <textarea
+            id="notes"
+            rows="5"
+          ></textarea>
+        </div>
+
+        <button type="submit">
+          Plant it
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+  <script src="/frontend/js/dashboard.js"></script>
+</body>
+</html>
