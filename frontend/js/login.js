@@ -1,45 +1,54 @@
-import {
-  getAuth,
-  signInWithEmailAndPassword
-} from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+const loginBtn = document.getElementById("login-btn");
+const loginMessage = document.getElementById("login-message");
 
-const firebaseConfig = {
-  apiKey: "AIzaSyCOCK-6585AyJxjB9BNrpvQRMboH2XlKmo",
-  authDomain: "homegardeningassistant.firebaseapp.com",
-  projectId: "homegardeningassistant",
-  storageBucket: "homegardeningassistant.appspot.com",
-  messagingSenderId: "152673905645",
-  appId: "1:152673905645:web:12390b05bc256bd2b5d5e4",
-  measurementId: "G-18HWMSLKFC"
-};
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-
-document.getElementById("login-btn").addEventListener("click", () => {
+loginBtn.addEventListener("click", async (e) => {
+  e.preventDefault();
   const email = document.getElementById("login-email").value;
   const password = document.getElementById("login-password").value;
-  const loginMessage = document.getElementById("login-message");
 
-  loginMessage.innerText = "";
+  try {
 
-  if (!email || !password) {
-    loginMessage.innerText = "Please enter both email and password.";
-    loginMessage.style.color = "red";
-    return;
-  }
+    const res = await fetch("http://localhost:3000/users/login", {
+      method: "POST",
 
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      loginMessage.innerText = "Login Successful ✅";
-      loginMessage.style.color = "green";
-      setTimeout(() => {
-        window.location.href = "dashboard.html";
-      }, 1000);
-    })
-    .catch((error) => {
-      loginMessage.innerText = "Login failed ❌: " + error.message;
-      loginMessage.style.color = "red";
+      headers: {
+        "Content-Type": "application/json"
+      },
+
+      credentials: "include",
+
+      body: JSON.stringify({
+        email,
+        password
+      })
     });
+
+    const data = await res.json();
+
+    console.log(data);
+
+    if (res.ok) {
+
+      console.log("login successfully");
+
+      loginMessage.innerText =
+        "Login successfully ✅";
+
+      setTimeout(() => {
+        window.location.href = "/frontend/pages/dashboard.html";
+      }, 1500);
+
+    } else {
+
+      loginMessage.innerText = data.message;
+
+    }
+
+  } catch (error) {
+
+    loginMessage.innerText = error.message;
+
+    console.log("failed");
+
+  }
 });

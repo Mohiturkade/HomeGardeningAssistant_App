@@ -1,61 +1,56 @@
-import {
-  auth,
-  createUserWithEmailAndPassword,
-  updateProfile
-} from './auth.js'; // Make sure this file exports `auth`
+const signupBtn = document.getElementById("signup-btn");
+const signupMessage = document.getElementById("signup-message");
 
-document.getElementById("signup-btn").addEventListener("click", async () => {
-  const name = document.getElementById("signup-name").value.trim();
-  const email = document.getElementById("signup-email").value.trim();
+signupBtn.addEventListener("click", async (e) => {
+  e.preventDefault();
+  const name = document.getElementById("signup-name").value;
+  const email = document.getElementById("signup-email").value;
   const password = document.getElementById("signup-password").value;
-  const confirmPassword = document.getElementById("signup-confirm-password").value;
-  const message = document.getElementById("signup-message");
-
-  message.innerText = "";
-  message.style.color = "red";
-
-  if (!name || !email || !password || !confirmPassword) {
-    message.innerText = "All fields are required.";
-    return;
-  }
-
-  if (password !== confirmPassword) {
-    message.innerText = "Passwords do not match.";
-    return;
-  }
 
   try {
-    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-    const user = userCredential.user;
 
-    // Update the display name
-    await updateProfile(user, {
-      displayName: name
+    const res = await fetch("http://localhost:3000/users/register", {
+      method: "POST",
+
+      headers: {
+        "Content-Type": "application/json"
+      },
+
+      credentials: "include",
+
+      body: JSON.stringify({
+        name,
+        email,
+        password
+      })
     });
 
-    message.style.color = "green";
-    message.innerText = "Signup successful ✅ Redirecting...";
+    const data = await res.json();
 
-    setTimeout(() => {
-      window.location.href = "dashboard.html";
-    }, 1500);
+    console.log(data);
+
+    if (res.ok) {
+
+      console.log("signup successfully");
+
+      signupMessage.innerText =
+        "Account created successfully ✅";
+
+      setTimeout(() => {
+        window.location.href = "/frontend/pages/dashboard.html";
+      }, 1500);
+
+    } else {
+
+      signupMessage.innerText = data.message;
+
+    }
+
   } catch (error) {
-    message.innerText = `Signup failed ❌: ${error.message}`;
+
+    signupMessage.innerText = error.message;
+
+    console.log("failed");
+
   }
 });
-
-window.addEventListener("DOMContentLoaded", () => {
-  const savedTheme = localStorage.getItem("theme");
-
-  if (savedTheme === "dark-theme") {
-    document.body.classList.add("dark-theme");
-    document.getElementById("theme-mode").src = "light-mode.png";
-  } else {
-    document.body.classList.remove("dark-theme");
-    document.getElementById("theme-mode").src = "dark-mode.png";
-  }
-});
-
-
-
-
