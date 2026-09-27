@@ -27,7 +27,10 @@ const loginUser = async (req, res) => {
       { id: user._id, email: user.email },
       process.env.JWT_SECRET,
       { expiresIn: "1d" },
+
     );
+   
+    console.log(token)
 
     res.cookie("token", token, {
       httpOnly: true,
@@ -35,6 +38,7 @@ const loginUser = async (req, res) => {
       sameSite: "lax",
       maxAge: 24 * 60 * 60 * 1000,
     });
+     console.log("Cookie set");
 
     res.status(200).json({
       message: "Login successful",
